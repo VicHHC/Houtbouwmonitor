@@ -1,45 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Stop the form from refreshing the page
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Projecten</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+        var email = document.getElementById('email').value;
 
-<body>
-
-    <!-- Header with navigation -->
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="mijnprojecten.html">Mijn Projecten</a>
-            <a href="information.html">Information</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Main content -->
-    <main>
-        <h1>Mijn Projecten Login</h1>
-        
-        <!-- Login form -->
-        <form id="loginForm">
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" required placeholder="jouw@email.nl">
-            </div>
-
-            <button type="submit">Login</button>
-        </form>
-    </main>
-
-    <!-- Footer (Optional) -->
-    <footer>
-        <p>© 2023 Houtbouw Locatie Monitor. All rights reserved.</p>
-    </footer>
-
-</body>
-
-</html>
+        fetch('<YOUR_GOOGLE_APPS_SCRIPT_URL>', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Check the response from your Google Apps Script
+            if (data.result === 'success') {
+                alert('Please check your email for a verification link.');
+            } else {
+                alert('There was an error. Please try again later.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An unexpected error occurred. Please try again later.');
+        });
+    });
+</script>
