@@ -21,10 +21,10 @@ $(document).ready(function() {
             url: "https://script.google.com/macros/s/AKfycbxvHyd8q5IJOze2atA70LKPLOr0BYaXgvmdQaccWGGRp304HYmHnu16K0_dS-CVWE5N/exec",
             data: formData,
             success: function(response) {
-                alert('Data saved successfully!');
+                alert('Bedankt voor het aanmelden van het project!');
             },
             error: function(err) {
-                alert('There was an error saving the data.');
+                alert('Error!');
             }
         });
     });
