@@ -18,7 +18,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "https://script.google.com/macros/s/AKfycbxvHyd8q5IJOze2atA70LKPLOr0BYaXgvmdQaccWGGRp304HYmHnu16K0_dS-CVWE5N/exec",
+            url: "https://script.google.com/macros/s/AKfycbw26thcSanEpZgVEaao7CJ8jBRGh-dSLgAfQDuCV_RjBS-R1vE-TuOQnleEirKSxCGHlQ/exec",
             data: formData,
             success: function(response) {
                 alert('Bedankt voor het aanmelden van het project!');
