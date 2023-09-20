@@ -1,14 +1,31 @@
 $(document).ready(function() {
-    // When the form is submitted
-    $("#questionnaireForm").submit(function(event) {
-        event.preventDefault(); // Prevent the form from actually submitting
 
-        var answer = $("#q1").val(); // Get the value from the dropdown
-
-        if (answer === "yes") {
-            $("#followUpQuestion").show(); // If answer is "yes", show the next question
+    $("#q1").change(function() {
+        if ($(this).val() === "yes") {
+            $("#followUpQuestion").show();
         } else {
-            alert('Thank you for your response!'); // If answer is "no", show a thank you message (or do something else if you prefer)
+            $("#followUpQuestion").hide();
         }
+    });
+
+    $("#questionnaireForm").submit(function(event) {
+        event.preventDefault();
+
+        var formData = {
+            "Ice Cream": $("#q1").val(),
+            "Flavor": $("#q2").val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "https://script.google.com/macros/s/AKfycbxvHyd8q5IJOze2atA70LKPLOr0BYaXgvmdQaccWGGRp304HYmHnu16K0_dS-CVWE5N/exec",
+            data: formData,
+            success: function(response) {
+                alert('Data saved successfully!');
+            },
+            error: function(err) {
+                alert('There was an error saving the data.');
+            }
+        });
     });
 });
