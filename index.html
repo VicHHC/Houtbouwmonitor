@@ -3,34 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Questionnaire</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Your Website Name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p, a, button {
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'PT Sans', sans-serif;
+            background-color: #F0F8FF;
+            color: #171D36;
+            line-height: 1.5;
+        }
+
+        header {
+            background-color: #171D36;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #F0F8FF;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #9FA8DA;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 15px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        button {
+            font-family: 'Nunito', sans-serif;
+            background-color: #171D36;
+            color: #F0F8FF;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #9FA8DA;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container mt-5">
-    <h2>Hedgehog Company - Houtbouw locatie monitor</h2>
-    <form id="questionnaireForm" autocomplete="off">
-        <div class="form-group">
-            <label for="q1">Do you like ice cream?</label>
-            <select id="q1" class="form-control">
-                <option value="" disabled selected>Select an option</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="mijnprojecten.html">Mijn Projecten</a>
+            <a href="information.html">Information</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Image of wood housing construction -->
+        <img src="https://www.ecohome.net/media/articles/images/5f/74/5f7453df04028e1f19f6cd3866bdebde050da0ff/thumbs/EDaoDAy05A6p_1200x500_EE_R0wWf.jpg" alt="Wood Housing Construction">
+
+        <!-- Call to Action Buttons -->
+        <div>
+            <button onclick="location.href='signup.html'">Nieuw project aanmelden</button>
+            <button onclick="location.href='mijnprojecten.html'">Mijn projecten</button>
         </div>
+    </main>
 
-        <div class="form-group" id="followUpQuestion" style="display: none;">
-            <label for="q2">What's your favorite flavor?</label>
-            <input type="text" id="q2" class="form-control">
-        </div>
-
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="script.js"></script>
+    <!-- Footer (Optional) -->
+    <footer>
+        <p>© 2023 Your Website Name. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
