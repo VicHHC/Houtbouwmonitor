@@ -1,0 +1,69 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, a, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #F0F8FF;
+    color: #171D36;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #171D36;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #F0F8FF;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #9FA8DA;
+}
+
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+button {
+    font-family: 'Nunito', sans-serif;
+    background-color: #171D36;
+    color: #F0F8FF;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #9FA8DA;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+}
